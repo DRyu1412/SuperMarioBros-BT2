@@ -52,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAxis = Input.GetAxis("Horizontal");
         velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * movespeed, movespeed * Time.deltaTime);
+
+        if(rigidbody.Raycast(Vector2.right * velocity.x))
+        {
+            velocity.x = 0;
+        }
     }
 
     public void GroundedMovement()
@@ -75,6 +80,16 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = Mathf.Max(velocity.y, gravity / 2);
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        {
+            if(transform.DotTest(collision.transform, Vector2.up))
+            {
+                velocity.y = 0f;
+            }
+        }
+    }
+
 
 }
