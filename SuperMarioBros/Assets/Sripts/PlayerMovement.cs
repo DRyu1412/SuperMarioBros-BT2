@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool grounded { get; private set; }
     public bool jumping { get; private set; }
+    public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
+    public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
 
     private void Awake()
     {
@@ -29,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         HorizontalMovement();
         grounded = rigidbody.Raycast(Vector2.down);
 
-        if (grounded)
+        if(grounded)
         {
             GroundedMovement();
         }
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.eulerAngles = Vector3.zero;
         }
-        else if (velocity.x < 0)
+        else if(velocity.x < 0)
         {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
@@ -73,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = Mathf.Max(velocity.y, 0f);
         jumping = velocity.y > 0f;
 
-        if (Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump"))
         {
             velocity.y = jumpForce;
             jumping = true;
