@@ -8,7 +8,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
     public Sprite idle;
     public Sprite jump;
     public Sprite slide;
-    public Sprite run;
+    public AnimatedSprite run;
 
     private void Awake()
     {
@@ -16,8 +16,20 @@ public class PlayerSpriteRenderer : MonoBehaviour
         movement = GetComponentInParent<PlayerMovement>();
     }
 
+    private void OnEnable()
+    {
+        spriteRenderer.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        spriteRenderer.enabled = false;
+    }
+
     private void LateUpdate()
     {
+        run.enabled = movement.running;
+
         if (movement.jumping)
         {
             spriteRenderer.sprite = jump;
@@ -26,11 +38,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
         {
             spriteRenderer.sprite = slide;
         } 
-        else if (movement.running)
-        {
-            spriteRenderer.sprite = run;
-        }
-        else
+        else if (!movement.running)    
         {
             spriteRenderer.sprite = idle;
         }
