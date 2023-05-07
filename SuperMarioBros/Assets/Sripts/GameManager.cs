@@ -69,6 +69,6 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        Invoke(nameof(NewGame), 3f);
+        NewGame();
     }
 }
