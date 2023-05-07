@@ -11,17 +11,17 @@ public class GameManager : MonoBehaviour
     {
         if(Instance != null)
         {
-            DestroyImmediate(gameObject);
+            DestroyImmediate(gameObject);         
         }
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  
+            DontDestroyOnLoad(gameObject);
         }
     }
     private void OnDestroy()
     {
-        if(Instance = this)
+        if(Instance == this)
         {
             Instance = null;
         }
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
 
-    private void NewGame()
+    public void NewGame()
     {
         lives = 3;
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
     }
-    private void GameOver()
+    public void GameOver()
     {
         NewGame();
     }
