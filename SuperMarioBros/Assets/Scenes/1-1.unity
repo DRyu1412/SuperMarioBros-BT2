@@ -930,7 +930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2211,6 +2211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1126791972}
   - {fileID: 2000143812}
   - {fileID: 1331664721}
   - {fileID: 160644377}
@@ -5117,6 +5118,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5951070594662244040, guid: 7aa28c9b168401c4a9bb3459ea7d858a, type: 3}
   m_PrefabInstance: {fileID: 1112513287}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1126791971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126791972}
+  m_Layer: 0
+  m_Name: Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1126791972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126791971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 150, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489749453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1126916690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5274,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6420,7 +6452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5115156335063183816, guid: 5b6e11e5aa8e58e40bb3ce53d9077e20, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5115156335063183816, guid: 5b6e11e5aa8e58e40bb3ce53d9077e20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6877,6 +6909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipe (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814390654570247593, guid: 639cfcbd0afc31645b1ed3d73a8ba49b, type: 3}
+      propertyPath: connection
+      value: 
+      objectReference: {fileID: 1126791972}
     - target: {fileID: 2058417534123832774, guid: 639cfcbd0afc31645b1ed3d73a8ba49b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7180,7 +7216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4521186453275061814, guid: 35f823f4741f03c4d9f5247609d2d939, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8008,7 +8044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 489749453}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1705717550
 SpriteRenderer:
@@ -9820,13 +9856,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 489749453}
     m_Modifications:
+    - target: {fileID: 81911482629268289, guid: 561387bd0f251a143a40e1916f0d0d8c, type: 3}
+      propertyPath: connection
+      value: 
+      objectReference: {fileID: 1681587150}
     - target: {fileID: 766167802219887796, guid: 561387bd0f251a143a40e1916f0d0d8c, type: 3}
       propertyPath: m_Name
       value: PipeConnection
       objectReference: {fileID: 0}
     - target: {fileID: 1145503528716968305, guid: 561387bd0f251a143a40e1916f0d0d8c, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1145503528716968305, guid: 561387bd0f251a143a40e1916f0d0d8c, type: 3}
       propertyPath: m_LocalPosition.x
