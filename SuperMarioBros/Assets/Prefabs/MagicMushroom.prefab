@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3893205325612973221}
   - component: {fileID: 2443355727334093267}
   - component: {fileID: 5691886594302978764}
+  - component: {fileID: 7468163568726221811}
   m_Layer: 6
   m_Name: MagicMushroom
   m_TagString: Untagged
@@ -178,3 +179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a794911fc98d99544af81facf615cc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7468163568726221811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672857284750846777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3a7e26ae97c6a4481c037c80b166e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
