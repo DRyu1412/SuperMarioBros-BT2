@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4774214975746559819}
   - component: {fileID: 8135337750304944276}
   - component: {fileID: 8579881576859829864}
+  - component: {fileID: 6486142664371666402}
+  - component: {fileID: 4492940090064891182}
   m_Layer: 6
   m_Name: 1UpMushroom
   m_TagString: Untagged
@@ -150,3 +152,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6486142664371666402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746982321706127008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7e937e7422c5f46ae36d6a192b44e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  direction: {x: 1, y: 0}
+--- !u!114 &4492940090064891182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746982321706127008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a794911fc98d99544af81facf615cc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
